@@ -158,6 +158,7 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
     wpa_supplicant \
+    wificond \
     wpa_supplicant.conf
 
 $(call inherit-product-if-exists, vendor/ti/omap4/omap4-vendor.mk)
