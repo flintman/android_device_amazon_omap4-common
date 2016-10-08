@@ -181,6 +181,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/amazon/omap4-common/manifest.xml:system/vendor/manifest.xml
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
