@@ -128,6 +128,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
     power.$(TARGET_BOOTLOADER_BOARD_NAME)
 
 # Low-RAM optimizations
