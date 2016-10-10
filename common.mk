@@ -119,7 +119,8 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.$(TARGET_BOOTLOADER_BOARD_NAME)
+    lights.$(TARGET_BOOTLOADER_BOARD_NAME) \
+    android.hardware.light@2.0-impl
 
 # Power
 PRODUCT_PACKAGES += \
