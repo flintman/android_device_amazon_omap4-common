@@ -53,6 +53,10 @@ PRODUCT_PACKAGES += \
     audio.primary.$(TARGET_BOOTLOADER_BOARD_NAME) \
     audio.hdmi.$(TARGET_BOOTLOADER_BOARD_NAME)
 
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl
+
 # Codecs
 PRODUCT_COPY_FILES += \
     $(COMMON_FOLDER)/prebuilt/etc/media_codecs.xml:/system/etc/media_codecs.xml \
