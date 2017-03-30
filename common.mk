@@ -88,6 +88,11 @@ ADDITIONAL_BUILD_PROPERTIES += \
 PRODUCT_PACKAGES += \
     libwvm
 
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.mapper@2.0-impl
+
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     make_ext4fs \
@@ -151,6 +156,10 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.amazon.omap4.rc
+
+# Vendor Interface Manifest
+PRODUCT_COPY_FILES += \
+    device/amazon/omap4-common/manifest.xml:system/vendor/manifest.xml
 
 # Wifi
 PRODUCT_PACKAGES += \
