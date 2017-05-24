@@ -169,6 +169,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.amazon.omap4.rc
 
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
 # Vendor Interface Manifest
 PRODUCT_COPY_FILES += \
     device/amazon/omap4-common/manifest.xml:system/vendor/manifest.xml
