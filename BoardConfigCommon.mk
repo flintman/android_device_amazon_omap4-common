@@ -78,7 +78,6 @@ MALLOC_SVELTE := true
 
 # Props
 ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.secure=0 \
     ro.allow.mock.location=1 \
     ro.debuggable=1
 
