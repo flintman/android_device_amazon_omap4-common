@@ -69,7 +69,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Device settings
-ADDITIONAL_BUILD_PROPERTIES += \
+PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=15 \
     ro.opengles.version=131072 \
@@ -85,7 +85,7 @@ ADDITIONAL_BUILD_PROPERTIES += \
     camera2.portability.force_api=1
 
 # Deeper Sleep / Better Battery Life
-ADDITIONAL_BUILD_PROPERTIES += \
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.disable.power.collapse=1 \
     pm.sleep_mode=1
 
@@ -126,9 +126,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_FOLDER)/prebuilt/etc/gps.conf:/system/etc/gps.conf
 
 # Lights
+
 PRODUCT_PACKAGES += \
-    lights.$(TARGET_BOOTLOADER_BOARD_NAME) \
-    android.hardware.light@2.0-impl
+    android.hardware.light@2.0-impl \
+    lights.$(TARGET_BOOTLOADER_BOARD_NAME)
 
 # Power
 PRODUCT_PACKAGES += \
@@ -136,7 +137,7 @@ PRODUCT_PACKAGES += \
     power.$(TARGET_BOOTLOADER_BOARD_NAME)
 
 # Low-RAM optimizations
-ADDITIONAL_BUILD_PROPERTIES += \
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.low_ram=true \
     persist.sys.force_highendgfx=true \
     dalvik.vm.jit.codecachesize=0 \

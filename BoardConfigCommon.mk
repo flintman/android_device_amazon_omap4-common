@@ -80,11 +80,6 @@ TARGET_NO_BOOTLOADER := true
 # Malloc
 MALLOC_SVELTE := true
 
-# Props
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.allow.mock.location=1 \
-    ro.debuggable=1
-
 # Recovery
 BOARD_CANT_BUILD_RECOVERY_FROM_BOOT_PATCH := true
 BOARD_HAS_NO_SELECT_BUTTON := true
