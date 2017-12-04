@@ -25,6 +25,27 @@
 #include <hardware/hardware.h>
 #include <hardware/power.h>
 
+// We only support clang and g++.
+#define UNUSED_ARGUMENT __attribute((unused))
+
+static void power_init(struct power_module *module UNUSED_ARGUMENT)
+{
+}
+
+static void power_set_interactive(struct power_module *module UNUSED_ARGUMENT,
+                                  int on UNUSED_ARGUMENT)
+{
+}
+
+static void power_hint(struct power_module *module UNUSED_ARGUMENT,
+                       power_hint_t hint,
+                       void *data UNUSED_ARGUMENT) {
+    switch (hint) {
+    default:
+        break;
+    }
+}
+
 #define CPUFREQ_INTERACTIVE "/sys/devices/system/cpu/cpufreq/interactive/"
 #define CPUFREQ_CPU0 "/sys/devices/system/cpu/cpu0/cpufreq/"
 #define BOOSTPULSE_PATH (CPUFREQ_INTERACTIVE "boostpulse")
