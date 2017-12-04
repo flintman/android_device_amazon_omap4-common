@@ -20,9 +20,6 @@
 #The devices and files used by the hciattach service are device specific
 /dev/ttyO1                               u:object_r:hci_attach_dev:s0
 
-# ttyO0 is for uart driver. gps_device is device specific
-/dev/ttyO0                               u:object_r:gps_device:s0
-
 # serial console
 /dev/ttyO2                               u:object_r:serial_device:s0
 
